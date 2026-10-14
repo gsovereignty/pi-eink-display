@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eink-codex"
+version = "0.5.0"
+description = "Live Codex agent status dashboard for Raspberry Pi e-paper"
+requires-python = ">=3.11"
+dependencies = ["eink-driver==0.1.0", "Pillow>=10,<13", "websockets>=15,<17"]
+
+[project.scripts]
+eink-codex = "codex_eink.app:main"
+
+[tool.setuptools.packages.find]
+include = ["codex_eink*"]

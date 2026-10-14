@@ -1,0 +1,1386 @@
+                            THINGWELL ELECTRONICS
+                             TEL:+86-755-27435731      FAX:+86-755-27132381
+                             http://www.lcdmaker.com
+
+File Name   Specification   For HINK 4.2’'   EPD         Module Number        HINK-E042A03
+ Version                     A/0                         Page Number             1 of 33
+
+
+
+
+       Specification for HINK 4.2''EPD
+
+             Model NO.:HINK-E042A03
+
+
+
+  Customer approval
+
+   Customer
+
+  Approval by
+
+Date of approval
+
+
+
+
+  Prepared by                  Checked by                          Approval by
+
+  Zhai chongzhi                   Jia pengfei                          Ma zewu
+
+
+
+
+                                   Page 1 of 33                               2015-01-08
+
+                                www.texim-europe.com
+                             THINGWELL ELECTRONICS
+                              TEL:+86-755-27435731      FAX:+86-755-27132381
+                              http://www.lcdmaker.com
+
+ File Name   Specification   For HINK 4.2’'   EPD         Module Number        HINK-E042A01
+  Version                     A/0                         Page Number             2 of 33
+
+
+
+
+Version                 Content                                Date               Producer
+
+  A/0                  New release                          2015/05/15
+
+  A/1
+
+
+
+
+                                    Page 2 of 33                               2015-01-08
+
+                                 www.texim-europe.com
+                                                   THINGWELL ELECTRONICS
+                                                       TEL:+86-755-27435731            FAX:+86-755-27132381
+                                                       http://www.lcdmaker.com
+
+     File Name                 Specification For HINK4.2' EPD                              Module Number              HINK-E042A01
+       Version                                        A/0                                    Page Number                    3 of 33
+
+                                                                CONTENTS
+1  General Description ..............................................................................................................4
+2  Features ..................................................................................................................................4
+3  Application .............................................................................................................................4
+4  Mechanical Specification.......................................................................................................5
+5  Mechanical Drawing of EPD module...................................................................................6
+6  Input/Output Terminals .........................................................................................................7
+     6.1 Pin out List ..............................................................................................................7
+    6.2     MCU Interface................................................................................................9
+    6.2.1 MCU Interface selection................................................. ................................9
+    6.2.2 MCU Serial Peripheral Interface (3-wire SPI)............. . . . ...........................10
+7 Command Table.........................................................................................................12
+8 MAXIMUM RATINGS ..........................................................................................17
+9 Reference Circuit.................................................................................................18
+10    Serial Peripheral Interface Timing.................................... .............................19
+11 Optical characteristics.........................................................................................20
+12 Reference Circuit.............................................................. ................................20
+13 Typical Operating Sequence...............................................................................23
+      13.1 Normal Operation Flow ... ... ...................................................................23
+      13.2 Reference Program Code ... ....................................................................24
+14 Optical Characteristics...................................................................................... ...25
+      14.1 Specifications ............................................................................ .......... ...25
+      14.2 Definition Of Contrast Ratio ... ... .............................................. .......... ..26
+      14.3 Reflection Ratio... ..................................................................... .......... ...27
+      14.4 Bi-stability... .......................................................................... .......... ...... .27
+15 Handling, Safety, and Environment Requirements .......................................................28
+16 Reliability test......................................................................................................29
+17 Block Diagram.....................................................................................................30
+18 Point and line standard ........................................................................................31
+19 Packing ...............................................................................................................33
+
+
+
+                                                                Page 3 of 33                                         2015-01-08
+
+                                                           www.texim-europe.com
+                                            THINGWELL ELECTRONICS
+                                              TEL:+86-755-27435731      FAX:+86-755-27132381
+                                              http://www.lcdmaker.com
+
+    File Name               Specification For HINK4.2' EPD                Module Number          HINK-E042A01
+      Version                                 A/0                           Page Number               4 of 33
+
+
+1 General Description
+
+          HINK-E042A03 is an Active Matrix Electrophoretic Display(AMEPD) , with interface and a reference
+
+system design. The 4.2' active area contains 400×300 pixels, and has 1-bit full display capabilities. An integrated
+
+circuit contains gate buffer, source buffer, interface, timing control logic, oscillator, DC-DC. SRAM.
+
+LUT ,VCOM,and border are supplied with each panel.
+
+
+2 Features
+
+      400×300 pixels display
+
+      White reflectance above 43%
+
+      Contrast ratio 10:1
+
+      Ultra wide viewing angle
+
+      Ultra low power consumption
+
+      Pure reflective mode
+
+      Bi-stable display Commercial temperature range
+
+      Landscape, portrait modes
+
+      Hard-coat antiglare display surface
+
+      Ultra Low current deep sleep mode
+
+      On chip display RAM
+
+      Waveform stored in On-chip OTP
+
+      Serial peripheral interface available
+
+      On-chip oscillator
+
+      On-chip booster and regulator control for generating VCOM, Gate and Source driving voltage
+
+      I2C signal master interface to read external temperature sensor
+
+
+3     Application
+
+     Electronic Shelf Label System
+
+
+                                                    Page 4 of 33                                2015-01-08
+
+                                                www.texim-europe.com
+                                  THINGWELL ELECTRONICS
+                                       TEL:+86-755-27435731      FAX:+86-755-27132381
+                                       http://www.lcdmaker.com
+
+    File Name          Specification For HINK4.2' EPD              Module Number        HINK-E042A01
+     Version                          A/0                            Page Number            5 of 33
+
+
+
+4    Mechanical Specifications
+             Parameter             Specifications                  Unit            Remark
+             Screen Size                4.2                        Inch
+         Display Resolution        400(H)×300(V)                   Pixel
+            Active Area          84.8(H)×63.6.0(V)                 mm
+             Pixel Pitch            0.212×0.212                    mm
+         Pixel Configuration         Rectangle
+         Outline Dimension     91.0(H)×77.0 (V) ×1.05(D)           mm
+               Weight                   TBD                         g
+
+
+
+
+                                              Page 5 of 33                              2015-01-08
+
+                                          www.texim-europe.com
+                                        THINGWELL ELECTRONICS
+                                         TEL:+86-755-27435731      FAX:+86-755-27132381
+                                         http://www.lcdmaker.com
+
+THINGWELL ELECTRONICS COMPANY LIMITED
+
+
+
+
+                                               www.texim-europe.com
+                                  THINGWELL ELECTRONICS
+                                      TEL:+86-755-27435731       FAX:+86-755-27132381
+                                      http://www.lcdmaker.com
+
+      File Name        Specification For HINK4.2' EPD               Module Number        HINK-E042A01
+       Version                       A/0                                 Page Number         7 of 33
+6      Input/Output Terminals
+6.1     Pin out List
+      Pin #   Type     Single                        Description                            Remark
+       1         O     CS1#                   Slave Chip Select input pin                   Note6-1
+       2         O     GDR             N-Channel MOSFET Gate Drive Control
+       3         O     RESE            Current Sense Input for the Control Loop
+       4         C     VGL                  Negative Gate driving voltage
+       5         C     VGH                   Positive Gate driving voltage
+       6         O     TSCL      I2C Interface to digital temperature sensor Clock pin
+       7      I/O      TSDA       I2C Interface to digital temperature sensor Date pin
+       8         I      BS1                        Bus selection pin                        Note 6-5
+       9         O     BUSY                      Busy state output pin                      Note 6-4
+       10        I     RES #                             Reset                              Note 6-3
+       11        I     D/C #                Data /Command control pin                       Note 6-2
+       12        I     CS #                      Chip Select input pin                      Note 6-1
+       13     I/O       D0                       serial clock pin (SPI)
+       14     I/O       D1                       serial data pin (SPI)
+       15        I     VDDIO                 Power for interface logic pins
+       16        I      VCI                 Power Supply pin for the chip
+       17               VSS                             Ground
+       18        C     VDD                       Core logic power pin
+       19        C      VPP              Power Supply for OTP Programming
+       20        C     VSH                  Positive Source driving voltage
+       21        C   PREVGH              Power Supply pin for VGH and VSH
+       22        C      VSL                Negative Source driving voltage
+       23        C   PREVGL          Power Supply pin for VCOM, VGL and VSL
+
+       24        C     VCOM                     VCOM driving voltage
+
+
+
+
+                                             Page 7 of 33                                2015-01-08
+
+                                         www.texim-europe.com
+                                          THINGWELL ELECTRONICS
+                                              TEL:+86-755-27435731         FAX:+86-755-27132381
+                                              http://www.lcdmaker.com
+
+    File Name              Specification For HINK4.2' EPD                     Module Number          HINK-E042A01
+      Version                                A/0                                   Page Number            8 of 33
+
+           该管脚（CS#,CS1#）是驱动IC的片选输入，连接MCU。当CS#拉低时，
+Note 6-1: This pin (CS#,CS1#) are the driver ic’s chip select input connecting to the MCU.When CS# is pulled low,
+主芯片使能MCU通信，当CS1#拉低时，从芯片使能，如果CS#和CS1#同时拉低，主从芯片就可以和MCU一起通信了。
+The master chip is enabled for MCU communication,and when CS1# is pulled low, the slaver chip is enabled,if CS#
+
+And CS1# pulled low at same time,the master and slaver chip are enabled to communication with mcu together.
+
+Note 6-2: This pin (D/C#) is Data/Command control pin connecting to the MCU. When the pin is pulled HIGH,the
+该引脚（D/C#）是连接到 MCU 的数据/命令控制引脚。 当引脚拉高时，数据将被解释为数据。 当引脚拉低时，数据将被解释为命令。
+data will be interpreted as data. When the pin is pulled LOW, the data will be interpreted as command.
+          该引脚（RES#）是复位信号输入。 复位低电平有效。
+Note 6-3: This pin (RES#) is reset signal input.      The Reset is active low.
+
+Note 6-4: This pin (BUSY) is Busy state output pin. When Busy is Low the operation of chip should not be
+该引脚（BUSY）是忙碌状态输出引脚。                Busy 为 Low 时，芯片的运行不应中断，也不应向模块发出任何命令。
+interrupted and any commands should not be issued to the module. The driver IC will put Busy pin Low when the
+当驱动 IC 工作时，驱动 IC 会将 Busy 引脚置低，例如：
+driver IC is working such as:
+
+- Outputting display waveform; or      输出显示波形； 或者
+
+- Communicating with digital temperature sensor        与数字温度传感器通信
+
+
+Note 6-5: This pin (BS1) is for 3-line SPI or 4-line SPI selection.       When it is “Low”, 4-line SPI is selected.
+          此引脚 (BS1) 用于 3 线 SPI 或 4 线 SPI 选择。
+When it is “High”, 3-line SPI (9 bits SPI) is selected.     Please refer to below Table.
+当它为“Low”时，选择 4 线 SPI。当它为“高”时，选择 3 线 SPI（9 位 SPI）。 请参考下表。
+
+                                            Table: Bus interface selection
+
+
+                       BS1             MPU Interface
+
+                       L               4-lines serial peripheral interface (SPI)
+
+                       H               3-lines serial peripheral interface (SPI) - 9 bits SPI
+
+
+
+
+                                                      Page 8 of 33                                  2015-01-08
+
+                                                   www.texim-europe.com
+                                            THINGWELL ELECTRONICS
+                                                 TEL:+86-755-27435731        FAX:+86-755-27132381
+                                                 http://www.lcdmaker.com
+
+    File Name              Specification For HINK4.2' EPD                       Module Number           HINK-E042A01
+      Version                                  A/0                               Page Number                 9 of 33
+
+6.2 MCU Interface
+6.2.1 MCU Serial Peripheral Interface (4-wire SPI)
+The 4-wire SPI consists of SCLK (serial clock), SDIN (serial data), D/C# and CS#. D0 acts as SCLK and D1 acts as
+SDIN.
+
+                            Table -1 : Control pins of 4-wire Serial Peripheral interface
+
+                               Function              CS# pin     D/C# pin      SCLK pin
+                               Write command             L             L             ↑
+                               Write data                L             H             ↑
+
+
+Note: ↑ stands for rising edge of signal
+
+SDIN is shifted into an 8-bit shift register in the order of D7, D6, ... D0. The data byte in the shift register is written to
+the Graphic Display Data RAM (RAM) or command register in the same clock. Under serial mode, only write
+operations are allowed.
+
+
+
+
+                       Figure 6-1 : Write procedure in 4-wire Serial Peripheral Interface mode
+
+
+
+
+                                                        Page 9 of 33                                   2015-01-08
+
+                                                    www.texim-europe.com
+                                            THINGWELL ELECTRONICS
+                                                TEL:+86-755-27435731        FAX:+86-755-27132381
+                                                http://www.lcdmaker.com
+
+    File Name              Specification For HINK4.2' EPD                      Module Number           HINK-E042A01
+      Version                                  A/0                               Page Number                10 of 33
+
+
+6.2.2 MCU Serial Peripheral Interface (3-wire SPI)
+The 3-wire serial interface consists of SCLK (serial clock), SDIN (serial data) and CS#. In SPI mode, D0 acts as
+SCLK and D1 acts as SDIN. The operation is similar to 4-wire serial interface while D/C# pin is not used. There are
+altogether 9-bits will be shifted into the shift register in sequence: D/C# bit, D7 to D0 bit. The D/C# bit (first bit of the
+sequential data) will determine the following data byte in the shift register is written to the Display Data RAM (D/C#
+bit = 1) or the command register (D/C# bit = 0). Under serial mode, only write operations are allowed.
+
+                              Table -2 : Control pins of 3-wire Serial Peripheral interface
+
+                              Function               CS# pin     D/C# pin      SCLK pin
+                              Write command             L        Tie LOW            ↑
+                              Write data                L        Tie LOW            ↑
+
+
+Note: ↑ stands for rising edge of signal
+
+
+
+
+                      Figure 6-1 : Write procedure in 3-wire Serial Peripheral Interface mode
+
+
+
+
+                                                       Page 10 of 33                                  2015-01-08
+
+                                                   www.texim-europe.com
+                                         THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731        FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+    File Name            Specification For HINK4.2' EPD                      Module Number      HINK-E042A01
+     Version                                A/0                                Page Number          11 of 33
+
+
+6.3 External Temperature Sensor Interface
+There are two ways to let the module get the ambient temperature,
+  1) use the external temperature sensor interface, The module provides two I/O lines [TSDA and TSCL] for
+      connecting digital temperature sensor for temperature reading sensing. TSDA will treat as SDA line and TSCL
+      will treat as SCL line. They are required connecting with external pull-up resistor when they are used to
+      connect to the temperature sensor,then the module will check the temperature automatically.
+  2) use any kinds of external temperature sensor to get the temperature value then converted to hex format,then use
+      the spi interface send command 0x1A and the temperature value into the module.The temperature value how to
+      converted to hex as the follow:
+    1. When the Temperature value MSByte bit D11 = 0, the temperature is positive and value (DegC) = +
+        (Temperature value)/16
+    2. When the Temperature value MSByte bit D11 = 1, the temperature is negative and value (DegC) = ~ (2’s
+       complement of Temperature value)/16
+       12-bit binary                 Hexadecimal                       Decimal          Value
+    (2's complement)                    Value                           Value          [DegC]
+    0111 1111 0000                        7F0                           2032             127
+     0111 1110 1110                       7EE                           2030          126.875
+    0111 1110 0010                        7E2                           2018          126.125
+    0111 1101 0000                        7D0                           2000             125
+    0001 1001 0000                        190                           400              25
+    0000 0000 0010                        002                            2              0.125
+    0000 0000 0000                        000                            0                0
+     1111 1111 1110                       FFE                            -2            -0.125
+    1110 0111 0000                        E70                           -400             -25
+    1100 1001 0010                        C92                           -878          -54.875
+    1100 1001 0000                        C90                           -880             -55
+
+
+
+
+                                                   Page 11 of 33                                2015-01-08
+
+                                                www.texim-europe.com
+                                         THINGWELL ELECTRONICS
+                                          TEL:+86-755-27435731        FAX:+86-755-27132381
+                                          http://www.lcdmaker.com
+
+     File Name            Specification For HINK4.2' EPD                 Module Number            HINK-E042A01
+      Version                             A/0                                 Page Number             12 of 33
+
+ 7 Command Table
+R/W# D/C# Hex D7 D6 D5 D4 D3 D2 D1 D0 Command                                     Description
+  0   0   01 0    0 0   0 0   0 0  1 Driver Output control                        Gate setting
+  0   1       A7 A6 A5 A4 A3 A2 A1 A0                                             Set A[8:0] = 127h
+  0   1       0   0 0   0 0   0 0 A8                                              Set B[2:0] = 0h
+  0   1       0   0 0   0 0 B2 B1 B0
+
+ 0     0   0C    0   0     0    0    1    1     0      0 Booster Soft start       Set A[7:0] = CFh
+ 0     1         1   A6    A5   A4   A3   A2    A1     A0 Control                 Set B[7:0] = CEh
+                                                          增压器软启动控制                Set C[7:0] = 8Dh
+ 0     1         1   B6    B5   B4   B3   B2    B1     B0
+ 0     1         1   C6    C5   C4   C3   C2    C1     C0
+ 0     0   10    0   0      0   1    0    0     0      0 Deep Sleep mode          Deep Sleep mode Control
+ 0     1         0   0      0   0    0    0     0      A0
+                                                                                   A[0] :        Description
+                                                                                   0             Normal Mode [POR]
+                                                                                   1             Enter Deep Sleep Mode
+ 0     0   11    0   0      0   1    0    0     0      1 Data Entry mode setting Define data entry sequence
+ 0     1         0   0      0   0    0    A2    A1     A0 数据输入模式设置               A [1:0] = ID[1:0]
+                                                                                  Address automatic increment /
+                                                                                 decrement setting
+                                                                                 The setting of incrementing or
+                                                                                 decrementing of the address counter
+                                                                                 can be made independently in each
+                                                                                 upper and lower bit of the address.
+
+                                                                                  00 –Y decrement, X decrement,
+                                                                                  01 –Y decrement, X increment,
+                                                                                  10 –Y increment, X decrement,
+                                                                                  11 –Y increment, X increment [POR]
+
+                                                                                  A[2] = AM
+                                                                                  Set the direction in which the address
+                                                                                  counter is updated automatically after
+                                                                                  data are written to the RAM.
+
+                                                                                  AM= 0, the address counter is updated
+                                                                                  in the X direction. [POR]
+                                                                                  AM = 1, the address counter is updated
+                                                                                  in the Y direction.
+
+ 0     0   12    0   0      0   1    0    0     1      0 SWRESET                  It resets the commands and parameters
+                                                                                  to their S/W Reset default values
+                                                                                  except R10h-Deep Sleep Mode
+                                                                                  Note: RAM are unaffected by this
+                                                                                  command.
+                                                                                  它将命令和参数重置为其 S/W 重置默认值，除了
+                                                                                  R10h-深度睡眠模式 注：RAM 不受此命令的影响。
+
+
+
+
+                                                    Page 12 of 33                                2015-01-08
+
+                                               www.texim-europe.com
+                                          THINGWELL ELECTRONICS
+                                           TEL:+86-755-27435731       FAX:+86-755-27132381
+                                           http://www.lcdmaker.com
+
+     File Name            Specification For HINK4.2' EPD                 Module Number          HINK-E042A01
+      Version                             A/0                              Page Number               13 of 33
+
+
+R/W# D/C# Hex D7 D6 D5 D4 D3 D2 D1 D0 Command                  Description
+  0   0   1A 0   0  0  1  1   0 1  0 Temperature       Sensor Write to temperature register.
+  0   1       A7 A6 A5 A4 A3 A2 A1 A0 Control    (Write     to
+                                      temperature register)    A[7:0] – MSByte 01111111[POR]
+  0   1       B7 B6 B5 B4 0   0 0  0                           B[7:0] – LSByte 11110000[POR]
+ 0     0   20    0    0     1   0    0     0    0      0 Master Activation        Activate Display Update Sequence
+
+                                                                                  The Display Update Sequence Option
+                                                                                  is located at R22h
+
+                                                                               User should not interrupt this operation
+                                                                               to avoid corruption of panel images.
+ 0     0   21    0    0     1   0    0    0     0     1 Display Update Control Option for Display Update
+ 0     1         A7   0     0   A4   A3   A2    A1    A0 1                     Bypass Option used for Pattern
+                                                                               Display, which is used for display the
+                                                                               RAM content into the Display
+
+                                                                                  OLD RAM Bypass option
+                                                                                  A [7]
+                                                                                  A[7] = 1: Enable bypass
+                                                                                  A[7] = 0: Disable bypass [POR]
+
+                                                                                  A[4] value will be used as for bypass.
+                                                                                  A[4] = 0 [POR]
+
+                                                                                  A[1:0] Initial Update Option - Source
+                                                                                  Control
+
+                                                                                     A[1:0]        GSC       GSD
+                                                                                     01 [POR]      GS0       GS1
+
+
+
+
+                                                    Page 13 of 33                               2015-01-08
+
+                                               www.texim-europe.com
+                                           THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731       FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+     File Name             Specification For HINK4.2' EPD                Module Number        HINK-E042A01
+      Version                              A/0                            Page Number             14 of 33
+
+
+R/W# D/C# Hex D7 D6 D5 D4 D3 D2 D1 D0 Command                                   Description
+  0   0   22 0   0  1  0  0   0 1  0 Display Update                             Display Update Sequence Option:
+  0   1       A7 A6 A5 A4 A3 A2 A1 A0 Control 2                                 Enable the stage for Master Activation
+
+                                                                                                             Parameter
+                                                                                                             (in Hex)
+                                                                                Enable Clock Signal,
+                                                                                Then Enable CP
+                                                                                Then Load Temperature
+                                                                                value
+                                                                                                             FF
+                                                                                Then Load LUT
+                                                                                                             [POR]
+                                                                                Then INIITIAL DISPLAY
+                                                                                Then PATTERN DISPLAY
+                                                                                Then Disable CP
+                                                                                Then Disable OSC
+                                                                                To Enable Clock Signal
+                                                                                                             80
+                                                                                (CLKEN=1)
+                                                                                To Enable Clock Signal,
+                                                                                then Enable CP               C0
+                                                                                (CLKEN=1, CPEN=1)
+                                                                                To INITIAL DISPLAY +
+                                                                                                             0C
+                                                                                PATTEN DISPLAY
+                                                                                To INITIAL DISPLAY           08
+                                                                                To DISPLAY PATTEN            04
+                                                                                To Disable CP,
+                                                                                then Disable Clock Signal 03
+                                                                                (CLKEN=1, CPEN=1)
+                                                                                To Disable Clock Signal
+                                                                                                             01
+                                                                                (CLKEN=1)
+                                                                                Remark:
+                                                                                CLKEN=1:
+                                                                                If CLS=VDDIO then Enable OSC
+                                                                                If CLS=VSS then Enable External
+                                                                                Clock
+                                                                                CLKEN=0:
+                                                                                If CLS=VDDIO then Disable OSC
+                                                                                AND
+                                                                                INTERNAL CLOCK Signal = VSS,
+ 0     0   24    0    0      1   0    0     1    0      0 Write RAM             After this command, data entries will
+                                                                                be written into the RAM until another
+                                                                                command is written. Address pointers
+                                                                                will advance accordingly.
+
+
+
+ 0     0   2C    0    0     1    0    1    0     1     1 Write VCOM register    Write VCOM register from MCU
+ 0     1         A7   A6    A5   A4   A3   A2    A1    A0                       interface
+
+
+
+
+                                                     Page 14 of 33                            2015-01-08
+
+                                                www.texim-europe.com
+                                           THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731       FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+     File Name             Specification For HINK4.2' EPD                 Module Number       HINK-E042A01
+      Version                              A/0                             Page Number             15 of 33
+
+
+R/W# D/C# Hex D7 D6 D5 D4 D3 D2 D1 D0 Command                                   Description
+  0   0   32 0   0  1    1    0   0 1 0 Write LUT register                      Write LUT register from MCU [240
+  0   1                                                                         bits],
+  0   1                                                                         (excluding the VSH/VSL and Dummy
+  0   1                   LUT                                                   bit)
+ …    …                [30 bytes]
+  0   1
+  0   1
+  0   0   3A 0   0  1    1    1   0 1 0 Set dummy line period                   Set A[7:0] = 1Ah
+  0   1       0 A6 A5 A4 A3 A2 A1 A0 设置虚拟线周期
+ 0     0   3B    0    0      1   1    1     0    1      1 Set Gate line width   Set B[3:0] = 8h
+                                                            设置栅极线宽
+ 0     1         0    0      0   0    A3   A2    A1    A0
+ 0     0   3C    0    0     1    1    1     1    0     0 Border Waveform        Select border waveform for VBD
+ 0     1         A7   A6    A5   A4   0     0    A1    A0 Control               A [7] Follow Source at Initial Update
+                                                             边界波形控制             Display
+                                                                                A [7]=0: [POR]
+                                                                                A [7]=1: Follow Source at Initial
+                                                                                Update Display for VBD, A [6:0]
+                                                                                setting are being overridden at Initial
+                                                                                Display STAGE.
+
+                                                                                A [6] Select GS Transition/ Fix Level
+                                                                                for VBD
+                                                                                A [6]=0: Select GS Transition A[3:0]
+                                                                                for VBD
+                                                                                A [6]=1: Select FIX level Setting
+                                                                                A[5:4] for VBD [POR]
+                                                                                A [5:4] Fix Level Setting for VBD
+                                                                                          A[5:4]         VBD level
+                                                                                          00             VSS
+                                                                                          01             VSH
+                                                                                          10             VSL
+                                                                                          11[POR]        HiZ
+                                                                                A [1:0] GS transition setting for VBD
+                                                                                (Select waveform like data A[3:2] to
+                                                                                data A[1:0])
+                                                                                     A[1:0]         GSA        GSB
+                                                                                     01 [POR]       GS0        GS1
+
+
+
+
+                                                     Page 15 of 33                            2015-01-08
+
+                                                www.texim-europe.com
+                                           THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731         FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+     File Name             Specification For HINK4.2' EPD                   Module Number        HINK-E042A01
+      Version                              A/0                                Page Number            16 of 33
+
+R/W# D/C# Hex D7 D6 D5 D4 D3 D2 D1 D0 Command                                      Description
+  0   0   44 0   1  0   0 0   1 0   0 Set RAM X - address                          Specify the start/end positions of the
+  0   1       0  0  0 A4 A3 A2 A1 A0 Start / End position                          window address in the X direction by
+  0   1       0  0  0 B4 B3 B2 B1 B0                                               an address unit
+
+
+                                                                                   A[4:0]: XSA[4:0], XStart, POR = 00h
+                                                                                   B[4:0]: XEA[4:0], XEnd, POR =
+                                                                                   1Dh
+ 0    0   45     0    1     0    0    0    1     0      1 Set Ram Y- address       Specify the start/end positions of the
+ 0    1          A7   A6    A5   A4   A3   A2    A1     A0 Start / End position    window address in the Y direction by
+ 0    1          0    0     0    0    0    0     0      A8                         an address unit
+ 0    1          B7   B6    B5   B4   B3   B2    B1     B0                         A[8:0]: YSA[8:0], YStart, POR =
+ 0    1          0    0     0    0    0    0     0      B8
+                                                                                   000h
+                                                                                   B[8:0]: YEA[8:0], YEnd, POR =
+                                                                                   13Fh
+ 0    0   4E     0    1     0    0    1    1     1      0 Set RAM X address        Make initial settings for the RAM X
+ 0    1          0    0     0    A4   A3   A2    A1     A0 counter                 address in the address counter (AC)
+                                                                                   A[4:0]: XAD[4:0], POR is 00h
+ 0    0   4F     0    1     0    0    1    1     1      1 Set RAM Y address        Make initial settings for the RAM Y
+ 0    1          A7   A6    A5   A4   A3   A2    A1     A0 counter                 address in the address counter (AC)
+                                                                                   A[8:0]: YAD8:0], POR is 000h
+ 0    1          0    0     0    0    0    0     0      A8
+ 0    1   FF     1    1     1    1    1    1     1      1 NOP                      This command is an empty command;
+                                                                                   it does not have any effect on the
+                                                                                   display module.
+                                                                                   However it can be used to terminate
+                                                                                   Frame Memory Write or Read
+                                                                                   Commands.
+
+
+
+
+                                                      Page 16 of 33                              2015-01-08
+
+                                                www.texim-europe.com
+                                          THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731        FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+    File Name            Specification For HINK4.2' EPD                       Module Number      HINK-E042A01
+     Version                               A/0                                 Page Number           17 of 33
+
+
+8 MAXIMUM RATINGS
+                                         Table 8-1: Maximum Ratings
+    Symbol         Parameter                                 Rating                       Unit
+    VCI            Logic supply voltage                           -0.5 to +3.7            V
+    VIN            Logic Input voltage                            -0.5 to VDDIO+0.5       V
+    VOUT           Logic Output voltage                           -0.5 to VDDIO+0.5       V
+    TOPR           Operation temperature range                    0 to 50                 °C
+    TSTG           Storage temperature range                      -25 to 85               °C
+
+
+Maximum ratings are those values beyond which damages to the device may occur. Functional operation should be
+restricted to the limits in the Electrical Characteristics tables or Pin Description section
+
+This device contains circuitry to protect the inputs against damage due to high static voltages or electric fields;
+however, it is advised that normal precautions be taken to avoid application of any voltage higher than maximum
+rated voltages to this high impedance circuit. This device may be light sensitive. Caution should be taken to avoid
+exposure of this device to any light source during normal operation. This device is not radiation protected.
+
+
+
+
+                                                  Page 17 of 33                                  2015-01-08
+
+                                               www.texim-europe.com
+                                           THINGWELL ELECTRONICS
+                                             TEL:+86-755-27435731       FAX:+86-755-27132381
+                                             http://www.lcdmaker.com
+
+      File Name            Specification For HINK4.2' EPD                    Module Number       HINK-E042A01
+          Version                           A/0                               Page Number            18 of 33
+
+9 ELECTRICAL CHARACTERISTICS
+      The following specifications apply for: VSS=0V, VCI=3.0V, TOPR=25℃.
+
+                                           Table 9-1: DC Characteristics
+Symbol         Parameter                   Test Condition              Applicable pin    Min.       Typ.      Max.    Unit
+VCI            VCI operation voltage                                   VCI                2.4       3.0         3.7   V
+VIH            High level input voltage                                D1 (SDIN), D0    0.8VDDIO                      V
+VIL            Low level input voltage                                 (SCLK), CS#,                        0.2VDDIO V
+                                                                       D/C#, RES#,
+                                                                       BS1, TSDA,
+                                                                       TSCL
+VOH            High level output voltage   IOH = -100uA                BUSY, TSDA,      0.9VDDIO                      V
+VOL            Low level output voltage    IOL = 100uA                 TSCL                                0.1VDDIO V
+Iupdate        Image update current                                                          -      8.5         12    mA
+Istandby       Standby panel current                                                         -       -          5     uA
+
+
+
+
+                                                   Page 18 of 33                                 2015-01-08
+
+                                                www.texim-europe.com
+                                                   THINGWELL ELECTRONICS
+                                                       TEL:+86-755-27435731         FAX:+86-755-27132381
+                                                       http://www.lcdmaker.com
+
+       File Name             Specification For HINK4.2' EPD                              Module Number                HINK-E042A01
+        Version                                      A/0                                    Page Number                     19 of 33
+
+10 Serial Peripheral Interface Timing
+        The following specifications apply for: VSS=0V, VCI=2.4V to 3.7V, TOPR=25℃
+ Symbol Parameter                                                               Min                             Typ    Max       Unit
+ tcycle         Clock Cycle Time                                                250                             -      -         ns
+ tAS              Address Setup Time                                                               150          -      -         ns
+ tAH              Address Hold Time                                                                150          -      -         ns
+ tCSS             Chip Select Setup Time                                                           120          -      -         ns
+ tCSH             Chip Select Hold Time                                                            60           -      -         ns
+ tDSW             Write Data Setup Time                                                            50           -      -         ns
+ tDHW             Write Data Hold Time                                                             15           -      -         ns
+ tCLKL            Clock Low Time                                                                   100          -      -         ns
+ tCLKH            Clock High Time                                                                  100          -      -         ns
+ tR               Rise Time [20% ~ 80%]                                                            -            -      15        ns
+ tF               Fall Time [20% ~ 80%]                                                            -            -      15        ns
+
+
+
+
+        D/C#
+
+                                                               t AS                      t AH
+
+                                           t CSS                                         t CSH
+         CS#
+
+                                                                         t cycle
+                                                   t CLKL                                              t CLKH
+
+SCLK(D 0 )
+                        tF                                                          tR
+                                                       t DSW                               t DHW
+
+SDIN(D 1 )                                                  Valid Data
+
+
+
+
+         CS#
+
+
+
+        SCLK(D0 )
+
+
+       SDIN(D1)                  D7          D6                D5        D4        D3            D2             D1         D0
+
+
+
+
+                                                                 Page 19 of 33                                        2015-01-08
+
+                                                            www.texim-europe.com
+                                      THINGWELL ELECTRONICS
+                                           TEL:+86-755-27435731      FAX:+86-755-27132381
+                                           http://www.lcdmaker.com
+
+     File Name          Specification For HINK4.2' EPD                 Module Number        HINK-E042A01
+      Version                           A/0                             Page Number             20 of 33
+
+11   Power Consumption
+
+     Parameter                                 Symbol     Conditions     TYP    Max     Unit    Remark
+      Panel power consumption during update        -             -       26.4    40     mW           -
+       Power consumption in standby mode           -             -         -    0.035   mW          -
+
+
+
+
+12 Reference Circuit
+
+
+
+
+                                         Figure . 12-1
+
+
+
+
+                                                 Page 20 of 33                              2015-01-08
+
+                                              www.texim-europe.com
+                       THINGWELL ELECTRONICS
+                          TEL:+86-755-27435731      FAX:+86-755-27132381
+                          http://www.lcdmaker.com
+
+File Name   Specification For HINK4.2' EPD            Module Number        HINK-E042A01
+ Version                 A/0                           Page Number             21 of 33
+
+
+
+
+                    Figure . 12-2
+
+
+
+
+                         Figure . 12-3
+
+
+
+
+                               Page 21 of 33                               2015-01-08
+
+                            www.texim-europe.com
+                       THINGWELL ELECTRONICS
+                          TEL:+86-755-27435731      FAX:+86-755-27132381
+                          http://www.lcdmaker.com
+
+File Name   Specification For HINK4.2' EPD            Module Number        HINK-E042A01
+ Version                 A/0                           Page Number             22 of 33
+
+
+
+
+                        Figure . 12-4
+
+
+
+
+                               Page 22 of 33                               2015-01-08
+
+                            www.texim-europe.com
+                                  THINGWELL ELECTRONICS
+                                     TEL:+86-755-27435731       FAX:+86-755-27132381
+                                     http://www.lcdmaker.com
+
+     File Name     Specification For HINK4.2' EPD                 Module Number        HINK-E042A01
+       Version                      A/0                             Page Number            23 of 33
+
+13     Typical Operating Sequence
+
+13.1     Normal Operation Flow        正常操作流程
+
+
+
+                                           Power On
+                                          (Apply VCI)
+
+
+
+
+                                  Reset the EPD driver IC
+
+
+
+
+                             Define the display size and
+                             the RAM address
+
+
+
+
+                             Turn on oscillator clock and
+                             DC/DC & regulator to
+                             generate the driving voltage
+
+
+
+                            Read temperature from external
+                            temperature sensor, then, load a
+                            waveform from OTP to LUT.
+
+
+
+                                      Clear the EPD
+
+
+
+
+                                 Load image data and Display
+                                 the image on EPD
+
+
+
+
+                             Turn off oscillator clock and
+                             DC/DC & regulator
+
+
+
+
+                                                               Enter into deep
+                    Power down
+                                                               sleep mode
+
+                                            Page 23 of 33                              2015-01-08
+
+                                        www.texim-europe.com
+                                            THINGWELL ELECTRONICS
+                                                  TEL:+86-755-27435731      FAX:+86-755-27132381
+                                                  http://www.lcdmaker.com
+
+       File Name           Specification For HINK4.2' EPD                     Module Number        HINK-E042A01
+          Version                             A/0                              Page Number             24 of 33
+
+   13.2     Reference Program Code
+                                                                                       VCOM Setting
+                                                                                    SPI(0x2c,value) Note1
+
+
+                  Power On
+                 (Apply VCI)
+                                                                                       Waveform Setting
+                                                                                  SPI(0x32,30 byte data) Note2
+
+            Init all the pin                                                                   CS# Low,CS1# High
+            D/C#,CS#,CS1#,D0,D1,                                                  Set RAMX address counter
+            RES#tohigh level,                                                     SPI(0x4e,0x00)
+                                                                                  Set RAMY address counter
+                                                                                  SPI(0x4f,0x2B,0x01)
+          BS1 High                      BS1 Low
+
+                                                                                  Left Half Screen
+3-wire spi communication       4-wire spi communication                           Image data download
+          mode                           mode                                     SPI(0x24, 7500 byte data)
+
+                                                                                                 CS# High,CS1# Low
+                                                                                  Set RAMX address counter
+                                                                                  SPI(0x4e,0x00)
+                                                                                  Set RAMY address counter
+               Panel Reset                                                        SPI(0x4f,0x2B,0x01)
+             RES# =LOW 10ms
+             RES#=HIGH 10ms                                                                          CS1# Low,CS# Low
+                                                                                    Right Half Screen
+                                                                                    Image data download
+                                                                                    SPI(0x24, 7500 byte data)
+           Gate Number and scan
+           order setting
+           SPI(0x01,0x2b,0x01,0x00)                                               Display update sequence setting:
+                                                                                  Use Waveform from Ram,
+                                                                                  SPI(0x22, 0xc7)
+
+        Scan frequence setting (50hz)
+        SPI(0x3A,0x16)                                                                  Image update
+        SPI(0x3b,0x08)                                                                  SPI(0x20)             Busy High
+                                                                                 Busy Low
+     Data 进入顺序设置 (Y+,X-)
+      Dara entry sequence setting (Y+,X-)
+      SPI(0x11,0x01)                                                                     Enter Deepsleep
+                                                                                         SPI(0x10,0x01)
+                                                             Note1:  The Vcom for Different batches EPD is
+       Set RAMX Start/end position
+                                                                    different.Holitech will provide different
+       SPI(0x44,0x00,0X18)
+       Set RAMY Start/end position                                  vcom value for different batches of EPD.
+       SPI(0x45,0x2B,0x01,0x00,0x00)                         Note2: The waveform for Different batches EPD
+      设置 RAMX 开始/结束位置                                              is different.Holitech will provide different
+      设置 RAMY 开始/结束位置
+                                                                   waveform for different batchs of EPD.
+
+                                                       Page 24 of 33                               2015-01-08
+
+                                                    www.texim-europe.com
+                                         THINGWELL ELECTRONICS
+                                                TEL:+86-755-27435731      FAX:+86-755-27132381
+                                                http://www.lcdmaker.com
+
+     File Name            Specification For HINK4.2' EPD                    Module Number         HINK-E042A01
+      Version                                   A/0                             Page Number           25 of 33
+
+14        Optical characteristics
+
+14.1 Specifications
+      Measurements are made with that the illumination is under an angle of 45 degrees, the detection is
+
+perpendicular unless otherwise specified.
+                                                                            T=25℃
+SYMBOL         PARAMETER          CONDITIONS           MIN                TYPE            MAX       UNIT         Note
+                                                                                                                 Note
+     R           Reflectance           White             34                43                 -       %
+                                                                                                                 9-1
+     Gn         2Grey Level                 -            -       DS+(WS-DS)xn(m-1)            -       L*          -
+     CR         Contrast Ratio        indoor             -                 10                 -        -          -
+  Tupdate        Update time            25℃              -                680ms               -       sec         -
+                                                                                                                 Note
+Panel’s life                          0℃~50℃                   1000000 times or 5 years
+                                                                                                                 9-2
+
+
+  WS : White state, DS : Dark state
+
+  Gray state from Dark to White : DS、WS
+
+  m:2
+
+  Note 9-1 : Luminance meter : Eye – One Pro Spectrophotometer
+
+  Note 9-2 : When work in temperature below 0 degree or above 50 degree , we do not recommend because the
+
+panel’s life will not be guaranteed
+
+
+
+
+                                                      Page 25 of 33                               2015-01-08
+
+                                                  www.texim-europe.com
+                                         THINGWELL ELECTRONICS
+                                             TEL:+86-755-27435731      FAX:+86-755-27132381
+                                             http://www.lcdmaker.com
+
+    File Name             Specification For HINK4.2' EPD                  Module Number          HINK-E042A01
+       Version                              A/0                             Page Number               26 of 33
+
+14.2     Definition of contrast ratio
+  The contrast ratio (CR) is the ratio between the reflectance in a full white area (R1) and the reflectance in a dark
+
+area (Rd)() :
+
+  R1: white reflectance     Rd: dark reflectance
+
+  CR = R1/Rd
+
+
+
+
+                                                   Page 26 of 33                                2015-01-08
+
+                                                www.texim-europe.com
+                                             THINGWELL ELECTRONICS
+                                                 TEL:+86-755-27435731        FAX:+86-755-27132381
+                                                 http://www.lcdmaker.com
+
+    File Name             Specification For HINK4.2' EPD                       Module Number        HINK-E042A01
+       Version                                  A/0                             Page Number             27 of 33
+
+14.3     Reflection Ratio
+  The reflection ratio is expressed as :
+
+  R = Reflectance Factor white board         x (L center / L white board )
+
+  L center is the luminance measured at center in a white area (R=G =B=1) . L white board is the luminance of a
+
+standard white board . Both are measured with equivalent illumination source . The viewing angle shall be no more
+
+than 2 degrees .
+
+
+
+
+     14.4     Bi-stability
+          1. The value of Contrast ratio in different time as follows：
+                              Bi-stability                                     Result
+                              250 hours                                        CR >8
+                              500 hours                                        CR >8
+                              750 hours                                        CR >7.5
+                              1000 hours                                       CR >7
+
+
+
+
+                                                       Page 27 of 33                                2015-01-08
+
+                                                    www.texim-europe.com
+                                          THINGWELL ELECTRONICS
+                                              TEL:+86-755-27435731      FAX:+86-755-27132381
+                                              http://www.lcdmaker.com
+
+     File Name            Specification For HINK4.2' EPD                   Module Number          HINK-E042A01
+      Version                                A/0                             Page Number               28 of 33
+
+15     HANDLING，SAFETY AND ENVIROMENTAL REQUIREMENTS
+
+
+                                                   WARNING
+The display glass may break when it is dropped or bumped on a hard surface . Handle with care.
+Should the display break, do not touch the electrophoretic material . In case of contact with electrophoretic
+material , wash with water and soap.
+
+
+
+                                                   CAUTION
+The display module should not be exposed to harmful gases , such as acid and alkali gases , which corrode
+electronic components.
+Disassembling the display module can cause permanent damage and invalidate the warranty agreements.
+
+
+
+Observe general precautions that are common to handling delicate electronic components . The glass can break and
+front surfaces can easily be damaged . Moreover the display is sensitive to static electricity and other rough
+environmental conditions.
+
+
+
+                                                Data sheet status
+Product specification        The data sheet contains final product specifications.
+                                                Limiting values
+Limiting values given are in accordance with the Absolute Maximum Rating System (IEC 134).
+Stress above one or more of the limiting values may cause permanent damage to the device.
+These are stress ratings only and operation of the device at these or any other conditions above those given in the
+Characteristics sections of the specification is not implied . Exposure to limiting values for extended periods may
+affect device reliability.
+                                            Application information
+Where application information is given , it is advisory and dose not form part of the specification.
+
+
+
+                                     Product Environmental certification
+  ROHS
+
+
+
+
+                                                    Page 28 of 33                                2015-01-08
+
+                                                 www.texim-europe.com
+                                      THINGWELL ELECTRONICS
+                                           TEL:+86-755-27435731      FAX:+86-755-27132381
+                                           http://www.lcdmaker.com
+
+     File Name           Specification For HINK4.2' EPD                Module Number        HINK-E042A01
+      Version                            A/0                            Page Number             29 of 33
+
+     16 Reliability test
+
+                 TEST                         CONDITION                    METHOD              REMARK
+1     High-Temperature Operation       T = 50℃,30% for 240 hrs          IEC 60 068-2-2Bp
+2     Low-Temperature Operation           T = 0℃ for 240 hrs            IEC 60 068-2-2Ab
+                                      T = +70℃, 23% for 240 hrs
+3      High-Temperature Storage                                         IEC 60 068-2-2Bp
+                                         Test in white pattern
+                                         T = -25℃ for 240 hrs
+4      Low-Temperature Storage                                          IEC 60 068-2-2Ab
+                                         Test in white pattern
+        High Temperature, High-
+5                                    T=+40℃,RH=90%for168hrs             IEC 60 068-2-3CA
+          Humidity Operation
+        High Temperature, High-      T=+60℃,RH=80%for240hrs
+6                                                                       IEC 60 068-2-3CA
+           Humidity Storage             Test in white pattern
+                                           [-25℃ 30mins]→
+                                            [+70℃ 30mins]
+7         Temperature Cycle                                             IEC 60 068-2-14NB
+                                                ,70cycles
+                                          Test in white pattern
+8       UV exposure Resistance        765 W/m2 for 168 hrs,40℃          IEC 60 068-2-5 Sa
+                                          Air-mode:+/-8kV,
+9        Electrostatic discharge         Contact-mode:+/-6kV,             IEC61000-4-2
+                                             330Ω,150pF
+                                    1.04G,Frequency : 10~500Hz
+                                                                          Full packed for
+10         Package Vibration              Direction : X,Y,Z
+                                                                             shipment
+                                   Duration:1hours in each direction
+                                   Drop from height of 122 cm on
+                                          Concrete surface
+                                                                          Full packed for
+11       Package Drop Impact       Drop sequence:1 corner, 3edges,
+                                                                             shipment
+                                               6face
+                                         One drop for each.
+12       Altitude test Operation       700hPa ( =3000 m ),48Hr
+                                      260hPa ( =10000 m ),48Hr
+13        Altitude test Storage
+                                         Test in white pattern
+                                                                                              Pass
+                                   POLYACETAL
+                                                                                              criteria –
+                                   Pen: Top
+                                                                       Test should be         no glass
+                                   R:0.8mm
+14          Stylus Tapping                                             done with a            breakage
+                                   Load: 300gf
+                                                                       bezel                  ordamage
+                                   Speed: 30times/min
+                                                                                              tomicrocap
+                                   Total 13,500times,
+                                                                                              sules
+
+
+                                                 Page 29 of 33                              2015-01-08
+
+                                              www.texim-europe.com
+                                        THINGWELL ELECTRONICS
+                                            TEL:+86-755-27435731      FAX:+86-755-27132381
+                                            http://www.lcdmaker.com
+
+    File Name            Specification For HINK4.2' EPD                 Module Number        HINK-E042A01
+     Version                               A/0                           Page Number             30 of 33
+Actual EMC level to be measured on customer application.
+Note : The protective film must be removed before temperature test.
+
+
+17 Block Diagram
+
+
+
+
+                                                  Page 30 of 33                              2015-01-08
+
+                                               www.texim-europe.com
+                                               THINGWELL ELECTRONICS
+                                                    TEL:+86-755-27435731           FAX:+86-755-27132381
+                                                    http://www.lcdmaker.com
+
+    File Name            Specification For HINK4.2' EPD                                Module Number              HINK-E042A01
+     Version                                        A/0                                  Page Number                     31 of 33
+
+18 Point and line standard
+
+Shipment Inseption Standard
+
+                                   Temperature            Humidity        Illuminance          Distance          Time            Angle
+        Environment
+                                   20℃～25℃           40%～55%RH          800～1200Lux        200～300㎜              35Sec
+                                    Defet type            Inspection                Standard                 Part-A
+                              .          dead/                                      D≤0.2㎜                   Ignore
+
+                                                           Electric             0.2㎜＜D≤0.25㎜                     N≤2
+                                   switch point
+                                                           Display
+                                      （point
+                                                                                   D＞0.25㎜                  Not Allow
+                                    overproof）
+
+                                                          L≤0.24；
+                                                                         ––                  Ignore                      No defect within
+                                     2. Line               W≤0.06                                                        20mm range of
+                                                      0.24≤L≤0.4；                                                             PartA
+                                                                         ––                    N≤2
+                                                      0.06＜W≤0.1
+                                                          L＞0.4；
+                                  （No switch）                            ––                     0                            Part-A
+                                                           W＞0.1
+  appearance standard                 3.line                                              Ignore in gray scale viewing
+                                                           Electric
+                                   （Switching
+                                                           Display            In Blak&white viewing Follow Non-Switching Criteria
+                                      line）
+                                    4.Display              Electric
+                                                                                                     Not Allow
+                                     unwork                Display
+                                                           Electric
+                                  5.Display error                                                    Not Allow
+                                                           Display
+                                    6.PS PET
+                                                            Vsual                        cannot beyond 1/2 of the border
+                                     warping
+                                    7.Protector                                          L≤2㎜，W≤0.05㎜，Ignore；
+                                                            Vsual
+                                       hurt                                           L＞2㎜，W＞0.05㎜，Not Allow；
+                                   8.Adhesive
+                                                            Vsual                       Bubble: 0.1mm≤D＜0.3mm﹠N≤2
+                                     coating
+                                    9.Packing               Vsual        cannot be dirty and breakdown;must be marked and identified
+                                                          1.Cannot be defect&failure cause by appearence defect；
+          Remark
+                                                           2.Cannot be larger size cause by appearence defect；
+
+
+
+
+                                                             Page 31 of 33                                        2015-01-08
+
+                                                      www.texim-europe.com
+                          THINGWELL ELECTRONICS
+                                TEL:+86-755-27435731      FAX:+86-755-27132381
+                                http://www.lcdmaker.com
+
+File Name     Specification For HINK4.2' EPD                Module Number         HINK-E042A01
+ Version                      A/0                            Page Number              32 of 33
+
+
+
+
+                     L=long     W=wide    D=point size
+    Edition           Content                                              Date
+      1              New edition                                        Sep.26.2014
+
+
+
+
+                                      Page 32 of 33                              2015-01-08
+
+                                   www.texim-europe.com
+                            THINGWELL ELECTRONICS
+                               TEL:+86-755-27435731      FAX:+86-755-27132381
+                               http://www.lcdmaker.com
+
+     File Name   Specification For HINK4.2' EPD            Module Number        HINK-E042A01
+      Version                 A/0                           Page Number             33 of 33
+
+19    Packing
+
+TBD
+
+
+
+
+                                    Page 33 of 33                               2015-01-08
+
+                                 www.texim-europe.com
+                                                Contact details
+
+        The Netherlands                      Belgium                      UK & Ireland
+
+
+
+
+   Elektrostraat 17               Zuiderlaan 14 bus 10             St. Mary’s House, Church Lane
+   NL-7483 PG Haaksbergen         B-1731 Zellik                    Carlton Le Moorland
+                                                                   Lincoln LN5 9HS
+
+   T: +31 (0)53 573 33 33         T:    +32 (0)2 462 01 00         T:   +44 (0)1522 789 555
+   F: +31 (0)53 573 33 30         F:    +32 (0)2 462 01 25         F:   +44 (0)845 299 22 26
+   E: nl@texim-europe.com         E:    belgium@texim-europe.com   E:   uk@texim-europe.com
+
+
+
+
+         Germany North                   Germany South                        Austria
+
+
+
+
+   Bahnhofstrasse 92              Martin-Kollar-Strasse 9          Warwitzstrasse 9
+   D-25451 Quickborn              D-81829 München                  A-5020 Salzburg
+
+
+   T: +49 (0)4106 627 07-0        T: +49 (0)89 436 086-0           T:   +43 (0)662 216 026
+   F: +49 (0)4106 627 07-20       F: +49 (0)89 436 086-19          F:   +43 (0)662 216 026-66
+   E: germany@texim-europe.com    E: germany@texim-europe.com      E:   austria@texim-europe.com
+
+
+
+
+          Nordic region                General information
+
+
+
+
+   Sdr. Jagtvej 12
+   DK-2970 Hørsholm
+                                   info@texim-europe.com
+   T:   +45 88 20 26 30            www.texim-europe.com
+   F:   +45 88 20 26 39
+   E:   nordic@texim-europe.com
+
+
+
+
+2015 version 2.0
+

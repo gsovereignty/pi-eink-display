@@ -1,0 +1,41 @@
+{
+  "time": 1791441561,
+  "available": true,
+  "counts": {
+    "active": 1,
+    "waiting": 0,
+    "idle": 0,
+    "errors": 0,
+    "roots_active": 1,
+    "children_active": 0,
+    "unknown": 0,
+    "loaded": 1
+  },
+  "threads": [
+    {
+      "id": "example-thread",
+      "parent": null,
+      "status": "active",
+      "project": "example-project",
+      "model": "gpt-6.1-sol"
+    }
+  ],
+  "quota": [
+    {
+      "usedPercent": 19,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791965724
+    }
+  ],
+  "errors": [],
+  "cli_pids": [],
+  "network": {
+    "stale": false,
+    "wireguard": {
+      "latest_handshake": 1791441541
+    },
+    "zerotier": {
+      "status": "ACCESS_DENIED"
+    }
+  }
+}

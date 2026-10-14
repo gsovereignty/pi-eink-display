@@ -1,0 +1,29 @@
+{
+  "run_id": "REPLACE with actual visible run ID",
+  "steps": {
+    "smoke": {
+      "new_image": null,
+      "whole_screen": null,
+      "orientation": null,
+      "both_halves": null,
+      "matches_expected": null,
+      "no_abnormal_heating": null,
+      "no_supply_problems_observed": null,
+      "contrast": null,
+      "ghosting": null,
+      "controller_seam": null,
+      "image_completeness": null,
+      "notes": null
+    }
+  },
+  "retention": {"all_power_disconnected": null, "new_image_retained": null, "observed_at": null},
+  "measurements": {
+    "supply_voltage_v": null,
+    "current_average_ma": null,
+    "current_switching_peak_ma": null,
+    "temperature_c": null,
+    "instrument": null,
+    "sampling_method": null
+  },
+  "photos": []
+}

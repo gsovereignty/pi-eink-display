@@ -1,0 +1,14 @@
+{
+  "observer": "REPLACE with observer",
+  "confirmed_at": "REPLACE with local ISO timestamp including +08:00",
+  "resistor": "3",
+  "all_power_disconnected_during_inspection": null,
+  "ribbon_seated_contacts_checked": null,
+  "wiring_matches_table": null,
+  "fan_preserved": null,
+  "no_visible_damage": null,
+  "no_abnormal_heating": null,
+  "ambient": {"description": null, "temperature_c_measured": null},
+  "starting_image": null,
+  "instruments_available": []
+}

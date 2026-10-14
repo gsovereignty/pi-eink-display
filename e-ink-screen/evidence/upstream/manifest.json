@@ -1,0 +1,34 @@
+{
+  "GxEPD2_2IC.zip": {
+    "bytes": 11291039,
+    "sha256": "b257bcdc482898888773ac27ce372706cb281f93f65ef0eb4268b89cd2f387f2"
+  },
+  "library.zip": {
+    "bytes": 2763456,
+    "sha256": "efa65245634797e62ce7fbd5fd4e7c4b8cad189bb648b8f57ead57bbc40b4c2f"
+  },
+  "GxEPD2_2IC_420_A03.cpp": {
+    "bytes": 12896,
+    "sha256": "367d84c71f79b6d57a2ed5f139437aabff074a28af7a65732634068d73d711a6"
+  },
+  "GxEPD2_2IC_420_A03.h": {
+    "bytes": 4505,
+    "sha256": "a24f3c1eb79899f5b093336fc0fa44b7e5ae72855bce4d69bae52cbef240dc3b"
+  },
+  "GxEPD2_2IC_EPD.cpp": {
+    "bytes": 7371,
+    "sha256": "78a572ad16c9e3ec32ed7b10b6e44fb2f9098843d12a8b52bfffc82d87ad33ad"
+  },
+  "GxEPD2_2IC_EPD.h": {
+    "bytes": 8042,
+    "sha256": "efda7f69204367438f8dd032f96a4ca2ff3cb91afdf728cfcfa8c1715a643d39"
+  },
+  "HINK-E042A03.pdf": {
+    "bytes": 1323758,
+    "sha256": "3d999bbeb4e0b4a76b6cb19d36710881b04d97fb84206952aa80cbe3b479db67"
+  },
+  "SSD1608.pdf": {
+    "bytes": 1860659,
+    "sha256": "7aa865ec5a8c18b21686018e656f93737bef599ab78170306befc715d2eeb955"
+  }
+}

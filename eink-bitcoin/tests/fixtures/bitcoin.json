@@ -1,0 +1,77 @@
+{
+  "time": 1791437605.169009,
+  "entries": {
+    "price": {
+      "data": {
+        "time": 1791437406,
+        "USD": 82879,
+        "EUR": 73976,
+        "GBP": 62815,
+        "CAD": 118282,
+        "CHF": 69059,
+        "AUD": 119006,
+        "JPY": 13120080
+      },
+      "fetched_at": 1791437604.047883
+    },
+    "fees": {
+      "data": {
+        "fastestFee": 2,
+        "halfHourFee": 1,
+        "hourFee": 1,
+        "economyFee": 1,
+        "minimumFee": 1
+      },
+      "fetched_at": 1791437604.2816699
+    },
+    "mempool": {
+      "data": {
+        "count": 75455,
+        "vsize": 40806190
+      },
+      "fetched_at": 1791437604.57114
+    },
+    "blocks": {
+      "data": [
+        {
+          "height": 970446,
+          "timestamp": 1791436763,
+          "tx_count": 6766,
+          "weight": 3992600
+        },
+        {
+          "height": 970445,
+          "timestamp": 1791436660,
+          "tx_count": 5623,
+          "weight": 3993653
+        },
+        {
+          "height": 970444,
+          "timestamp": 1791436847,
+          "tx_count": 3334,
+          "weight": 3993799
+        }
+      ],
+      "fetched_at": 1791437604.895277
+    },
+    "difficulty": {
+      "data": {
+        "progressPercent": 37.202380952380956,
+        "difficultyChange": 5.822093943528661,
+        "estimatedRetargetDate": 1792156370170,
+        "remainingBlocks": 1266,
+        "remainingTime": 718765170,
+        "previousRetarget": -0.03093703234718248,
+        "previousTime": 1791011796,
+        "nextRetargetHeight": 971712,
+        "timeAvg": 567745,
+        "adjustedTimeAvg": 567745,
+        "timeOffset": 0,
+        "expectedBlocks": 709.6816666666666
+      },
+      "fetched_at": 1791437605.168989
+    }
+  },
+  "errors": {},
+  "source": "https://mempool.space/api"
+}
